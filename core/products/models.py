@@ -25,7 +25,7 @@ class Category(models.Model):
 class Cart(models.Model):
     user_id = models.IntegerField()
     date = models.DateTimeField(auto_now_add=True)
-    products = models.ManyToManyField(Product)
+    products = models.ManyToManyField(Product,blank=True)
 
     def __str__(self):
         return f"Cart {self.id} for User {self.user_id}"
