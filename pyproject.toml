@@ -1,0 +1,23 @@
+[project]
+name = "shoppy-server"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Rajan66",email = "rajanmaharjan042@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "django (>=5.1.6,<6.0.0)",
+    "djangorestframework (>=3.15.2,<4.0.0)",
+    "pillow (>=11.1.0,<12.0.0)",
+    "django-cors-headers (>=4.7.0,<5.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "shoppy_server", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
