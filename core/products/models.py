@@ -22,7 +22,7 @@ class Category(models.Model):
 
 class Cart(models.Model):
     user_id = models.IntegerField()
-    date = models.DateTimeField()
+    date = models.DateTimeField(auto_now_add=True)
     products = models.ManyToManyField(Product)
 
     def __str__(self):
